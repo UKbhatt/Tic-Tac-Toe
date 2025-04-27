@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
             centerTitle: true,
-            backgroundColor:Colors.orange, 
+            backgroundColor: Colors.orange,
           ),
           body: Center(
             child: Column(
@@ -190,10 +190,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           margin: const EdgeInsets.all(4),
                           decoration: BoxDecoration(
                             color: board[index] == ''
-                                ?  Colors.yellow[700] 
+                                ? Colors.yellow[700]
                                 : (board[index] == 'X'
                                     ? Colors.red[400]
-                                    : Colors.blue[500]), 
+                                    : Colors.blue[500]),
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(color: Colors.black, width: 2),
                             boxShadow: [
@@ -222,33 +222,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton.icon(
                   onPressed: resetGame,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange, 
+                    backgroundColor: Colors.orange,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 15),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     ),
                   ),
-                  icon: const Icon(Icons.refresh , color: Colors.white,),
+                  icon: const Icon(
+                    Icons.refresh,
+                    color: Colors.white,
+                  ),
                   label: const Text(
                     "Reset Game",
-                    style: TextStyle(fontSize: 18 , color: Colors.white),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
               ],
             ),
           ),
         ),
-        Align(
-          alignment: Alignment.topCenter,
-          child: ConfettiWidget(
-            confettiController: _confettiController,
-            blastDirectionality: BlastDirectionality.explosive,
-            shouldLoop: false,
-            numberOfParticles: 30,
-            emissionFrequency: 0.05,
-          ),
-        ),
+        
       ],
     );
   }
